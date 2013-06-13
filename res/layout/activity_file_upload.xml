@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/file_upload_screen_title">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+   
+   <!-- Body starts here -->
+   <LinearLayout
+       android:layout_below="@id/file_upload_screen_title"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:padding="10dip">
+       
+       <!-- Activity title -->
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/file_upload_title"
+           android:textSize="25dip"/>
+       
+       <TextView 
+                android:id="@+id/hidden_file_upload_1_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"/>
+       
+       <CheckBox
+        	android:id="@+id/chk_upload_to_public_folder"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/file_upload_check_box"
+        	android:checked="false" />
+       
+       <TextView 
+                android:id="@+id/hidden_file_upload_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"/>
+       
+       
+       <TableLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" 
+           android:stretchColumns="1">
+           
+           <TableRow >
+             <TextView 
+           		android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+           		android:text="@string/file_upload_question_select"/>
+       
+              
+              <Button 
+                  	android:id="@+id/select_file_btn"
+           			android:layout_width="wrap_content"
+           			android:layout_height="wrap_content"
+           			android:text="@string/file_upload_select_file_btn"/>
+               
+           </TableRow>           
+       </TableLayout>
+       
+       <TextView 
+                android:id="@+id/hidden_file_upload_2_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"
+           		android:textColor="@color/file_name_color"/>
+       
+       <TextView 
+                android:id="@+id/hidden_file_upload_22_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"/>
+       
+       <TableLayout 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" >
+           <TableRow >
+               <Button 
+                  	android:id="@+id/upload_file_btn"
+           			android:layout_width="wrap_content"
+           			android:layout_height="wrap_content"
+           			android:text="@string/file_upload_btn_upload"/>
+               
+               <Button 
+                  	android:id="@+id/cancel_file_upload_file_btn"
+           			android:layout_width="wrap_content"
+           			android:layout_height="wrap_content"
+           			android:text="@string/file_upload_btn_cancel"/>
+           </TableRow>
+       
+       </TableLayout>
+           
+   </LinearLayout>
+   
+    
+   <!-- Footer starts here -->
+   <LinearLayout android:id="@+id/file_download_footer"
+    	android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:layout_alignParentBottom="true">
+       
+       <TextView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/footer_string"
+                android:background="@color/footer_color"
+                android:gravity="center"/>
+       
+	</LinearLayout>
+   
+</RelativeLayout>

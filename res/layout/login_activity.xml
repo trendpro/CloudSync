@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/login_screen_title">
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+   
+   <!-- Body starts here -->
+   <LinearLayout
+       android:layout_below="@id/login_screen_title"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:padding="10dip">
+       
+       <!-- Activity title -->
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/login_title"
+           android:textSize="25dip"/>
+       
+           <TextView 
+           		android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+           		android:text="@string/username"/>
+           
+           <EditText 
+                android:id="@+id/username_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"/>
+    
+           <TextView 
+           		android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+           		android:text="@string/password"/>
+           
+           <EditText 
+                android:id="@+id/password_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:password="true"/>
+           
+           <TextView 
+                android:id="@+id/hidden_login_response"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"
+           		android:textColor="@color/login_error_color"/>
+       
+   		
+       <TableLayout 
+       	android:layout_width="fill_parent"
+   		android:layout_height="wrap_content">
+           <TableRow >
+           <Button 
+       		    android:id="@+id/login_btn"
+               	android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+           		android:text="@string/btn_login"/>
+           <Button 
+       		    android:id="@+id/cancel_btn"
+               	android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+           		android:text="@string/btn_cancel"/>
+           </TableRow>
+       </TableLayout>
+   </LinearLayout>
+   
+    
+   <!-- Footer starts here -->
+  
+   <LinearLayout android:id="@+id/login_footer"
+    	android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:layout_alignParentBottom="true">
+       
+       <TextView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/footer_string"
+                android:background="@color/footer_color"
+                android:gravity="center"/>
+       
+	</LinearLayout>
+   
+</RelativeLayout>

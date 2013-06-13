@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/file_upload_screen_title">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+        
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_logo" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+   
+   <!-- Body starts here -->
+   <LinearLayout
+       android:layout_below="@id/file_upload_screen_title"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:padding="10dip">
+       
+       <!-- Activity title -->
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/file_download_title"
+           android:textSize="25dip"
+           android:gravity="center"
+           android:textStyle="bold"/>
+       
+       <!-- File download address bar -->
+       <EditText 
+                android:id="@+id/file_download_address_bar"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"/>
+   
+   </LinearLayout>
+</RelativeLayout>

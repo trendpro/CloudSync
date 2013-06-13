@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/home_screen_title">
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+   
+   <!-- Body starts here -->
+   <LinearLayout
+       android:layout_below="@id/home_screen_title"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:padding="10dip">
+       
+       <!-- Activity title -->
+       <TextView 
+                android:id="@+id/home_1_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"/>
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/home_screen_title"
+           android:textSize="25dip"/>
+       
+       <TextView 
+                android:id="@+id/home_2_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"/>
+       
+       <Button android:id="@+id/file_download_btn"
+   			android:layout_height="wrap_content" 
+   			android:layout_width="fill_parent"     
+   			android:text="@string/home_screen_download_btn"/>
+       
+       <TextView 
+                android:id="@+id/home_3_edittext"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"
+           		android:singleLine="true"/>
+       
+       <Button android:id="@+id/file_upload_btn"
+   			android:layout_height="wrap_content" 
+   			android:layout_width="fill_parent"     
+   			android:text="@string/home_screen_upload_btn"/>
+           
+   </LinearLayout>
+   
+    
+   <!-- Footer starts here -->
+    <LinearLayout android:id="@+id/home_screen_footer"
+    	android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:layout_alignParentBottom="true">
+       
+       <TextView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/footer_string"
+                android:background="@color/footer_color"
+                android:gravity="center"/>
+       
+	</LinearLayout>   
+</RelativeLayout>

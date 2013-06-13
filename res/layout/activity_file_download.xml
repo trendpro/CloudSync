@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/file_upload_screen_title">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+        
+        <ImageView style="@style/TitleBarLogo"
+            android:contentDescription="@string/description_logo"
+            android:src="@drawable/title_logo" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+   
+   <!-- Body starts here -->
+   <LinearLayout
+       android:layout_below="@id/file_upload_screen_title"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" 
+    	android:padding="10dip">
+       
+       <!-- Activity title -->
+       <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/file_download_title"
+           android:textSize="25dip"/>
+   
+       
+       <!-- List view or spinner showing all files on your Amazon S3 Account -->
+       <ListView android:id="@android:id/list"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_alignParentTop="true"
+    		/>
+                 
+   </LinearLayout>
+   
+    
+   <!-- Footer starts here -->
+   <LinearLayout android:id="@+id/file_download_footer"
+    	android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:layout_alignParentBottom="true">
+       
+       <TextView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/footer_string"
+                android:background="@color/footer_color"
+                android:gravity="center"/>
+       
+	</LinearLayout>
+   
+</RelativeLayout>

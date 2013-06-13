@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/TitleBar"
+        android:id="@+id/file_upload_screen_title1">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+    </LinearLayout>
+   
+   <!-- Body starts here -->
+   <LinearLayout
+        android:layout_below="@id/file_upload_screen_title1"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" 
+    	android:paddingLeft="10dip"
+    	android:paddingRight="10dip"
+    	android:paddingBottom="55dip">
+       
+     
+       <LinearLayout
+        	android:layout_below="@id/file_upload_screen_title"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical" 
+    		android:padding="10dip">
+       		
+            <EditText 
+                android:id="@+id/file_download_address_bar"
+               	android:layout_width="fill_parent"
+           		android:layout_height="wrap_content"/>
+            
+            <TableLayout 
+                android:layout_width="fill_parent"
+    			android:layout_height="wrap_content">
+                <TableRow >
+                    <Button 
+                		android:id="@+id/address_go_btn"
+   						android:layout_height="wrap_content" 
+   						android:layout_width="wrap_content"     
+   						android:text="@string/address_go_btn_text"/>
+                    
+                    <Button 
+                		android:id="@+id/address_refresh_btn"
+   						android:layout_height="wrap_content" 
+   						android:layout_width="wrap_content"     
+   						android:text="Refresh"/>
+                    
+                    <Button 
+                		android:id="@+id/address_back_btn"
+   						android:layout_height="wrap_content" 
+   						android:layout_width="wrap_content"
+   						android:text="Back"/>
+                    
+                </TableRow>
+            </TableLayout>
+            
+   	   </LinearLayout>
+   
+       
+       <!-- List view or spinner showing all files on your Amazon S3 Account -->
+       <ListView
+    		android:id="@+id/android:list"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content" />
+      
+	  <TextView
+     		android:id="@+id/android:empty"
+     		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:text="@string/not_items_to_display"/>
+   
+	</LinearLayout>
+
+   <!-- Footer starts here -->
+   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:id="@+id/file_download_footer1"
+    	android:layout_width="fill_parent"
+    	android:layout_height="50dip"
+    	android:layout_alignParentBottom="true">
+       
+       <TextView android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/footer_string"
+                android:background="@color/footer_color"
+                android:gravity="center"/>
+       
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Select one of the features below.</string>
+
+    <string name="app_name">CloudSync</string>
+    <string name="description_logo">Demo</string>
+
+    <string name="description_about">About</string>
+    <string name="description_home">Home</string>
+    <string name="description_search">Search</string>
+  
+    <string name="title_home">Home</string>
+
+    <string name="title_feature1">Cloud Sync Home</string>
+    <string name="title_feature2">Cloud Sync</string>
+    <string name="title_feature3">Cloud Sync Download</string>
+  
+
+    <string name="login_title">User Login</string>
+    
+    <!-- Login screen strings -->
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_cancel">Cancel</string>
+    
+    <!-- Home Activity strings -->
+    <string name="home_screen_title">Welcome,</string>
+    <string name="home_screen_download_btn">Download Files</string>
+    <string name="home_screen_upload_btn">Upload Files</string>
+    
+    <!-- Upload Activty strings -->
+    <string name="file_upload_title">File Upload</string>
+    <string name="file_upload_check_box">Upload Files to public folder</string>
+    <string name="file_upload_question_select">Select file to upload</string>
+    <string name="file_upload_file_name">File Name:</string>
+    <string name="file_upload_select_file_btn">Select</string>
+    <string name="file_upload_btn_cancel">Cancel</string>
+    <string name="file_upload_btn_upload">Upload</string>
+    
+    <!-- File downlaod Activity strings -->
+    <string name="file_download_title">My Amazon S3 Files</string>
+    <string name="file_download_context_menu_title">Cloud Sync Download</string>
+    <string name="file_download_context_menu_dowload_option">Download</string>
+    <string name="file_download_context_menu_cancel_option">Cancel</string>
+    <string name="footer_string"></string>
+    
+    <string name="not_items_to_display">No items to display,empty Folder! Maybe check your internet connection  or file path you entered in address bar.</string>
+    <string name="address_bar_title">Address:</string>
+    <string name="address_go_btn_text">go</string>
+    
+</resources>
